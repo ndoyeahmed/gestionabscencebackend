@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 public class ProfilUtilisateur  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(columnDefinition = "serial")
+    @Column(columnDefinition = "serial")
     private Long id;
     private Timestamp date;
 

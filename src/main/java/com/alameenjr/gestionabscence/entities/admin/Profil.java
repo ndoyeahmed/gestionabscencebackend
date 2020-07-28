@@ -11,7 +11,7 @@ import java.util.List;
 public class Profil {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(columnDefinition = "serial")
+    @Column(columnDefinition = "serial")
     private Long id;
     private String libelle;
     private String description;

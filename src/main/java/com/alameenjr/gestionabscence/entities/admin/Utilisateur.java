@@ -14,7 +14,7 @@ public class Utilisateur {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(columnDefinition = "serial")
+    @Column(columnDefinition = "serial")
     private Long id;
     private String login;
     private String password;
@@ -26,6 +26,7 @@ public class Utilisateur {
     @Lob
     private String photo;
     private boolean statut;
+    @Column(columnDefinition = "boolean default false")
     private boolean archive;
     @Column(columnDefinition = "boolean default false")
     private boolean passwordChange;
