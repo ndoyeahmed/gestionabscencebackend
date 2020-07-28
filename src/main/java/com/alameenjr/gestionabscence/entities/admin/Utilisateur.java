@@ -25,6 +25,7 @@ public class Utilisateur {
     private String adresse;
     @Lob
     private String photo;
+    @Column(columnDefinition = "boolean default false")
     private boolean statut;
     @Column(columnDefinition = "boolean default false")
     private boolean archive;
