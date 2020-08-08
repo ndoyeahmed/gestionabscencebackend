@@ -58,6 +58,7 @@ public class UtilisateurController {
             response.addHeader(TokenProvider.HEADER, "Bearer " + jwt);
             return ResponseEntity.ok(new JWTToken(jwt.get("id_token"), Long.valueOf(jwt.get("expires_at"))));
         } catch (Exception e) {
+            e.printStackTrace();
             log.severe(e.getLocalizedMessage());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(Collections.singletonMap("AuthenticationException", e.getLocalizedMessage()));
